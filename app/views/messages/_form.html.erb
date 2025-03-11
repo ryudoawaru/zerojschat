@@ -1,0 +1,4 @@
+<%= form_with model: @chat_room.messages.new, url: chat_room_messages_path(@chat_room), id: :new_message_form do |f| %>
+  <%= f.text_field :content %>
+  <%= f.submit '送出' %>
+<% end %>

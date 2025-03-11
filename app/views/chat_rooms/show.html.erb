@@ -1,0 +1,6 @@
+<%= turbo_stream_from [@chat_room, :messages] %>
+<ul id="messages">
+  <%= render partial: 'messages/message', collection: @messages%>
+</ul>
+<%= render partial: 'messages/form'%>
+
