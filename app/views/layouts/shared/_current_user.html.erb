@@ -1,0 +1,17 @@
+<div class="bg-gray-900 h-14 px-2 flex items-center">
+  <div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center">
+    <span class="font-medium text-sm">TW</span>
+  </div>
+  <div class="ml-2">
+    <% if current_user %>
+      <div class="text-sm font-medium"><%=current_user.username%></div>
+    <% else%>
+    <% end %>
+  </div>
+  <div class="ml-auto flex space-x-2 text-gray-400">
+    <i class="fas fa-microphone cursor-pointer hover:text-gray-200"></i>
+    <i class="fas fa-headphones cursor-pointer hover:text-gray-200"></i>
+    <i class="fas fa-cog cursor-pointer hover:text-gray-200"></i>
+  </div>
+</div>
+</div>

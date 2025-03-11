@@ -1,4 +1,10 @@
-<%= form_with model: @chat_room.messages.new, url: chat_room_messages_path(@chat_room), id: :new_message_form do |f| %>
-  <%= f.text_field :content %>
-  <%= f.submit '送出' %>
-<% end %>
+<div class="px-4 pb-4" id="new_message_form">
+  <div class="bg-gray-800 rounded-lg flex items-center p-1">
+    <div class="p-2 text-gray-400 hover:text-gray-200 cursor-pointer">
+      <i class="fas fa-plus-circle"></i>
+    </div>
+    <%= form_with model: @chat_room.messages.new, url: chat_room_messages_path(@chat_room) do |f| %>
+      <%= f.text_field :content, placeholder: "發送訊息到 ##{@chat_room.name}", class: 'bg-transparent flex-1 px-3 py-2 text-gray-200 focus:outline-none' %>
+    <% end %>
+  </div>
+</div>

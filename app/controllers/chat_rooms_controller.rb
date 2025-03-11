@@ -1,6 +1,6 @@
 class ChatRoomsController < ApplicationController
   def index
-    @chat_rooms = ChatRoom.all
+    redirect_to chat_room_path(ChatRoom.first)
   end
 
   def show
